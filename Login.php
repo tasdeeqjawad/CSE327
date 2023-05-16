@@ -98,7 +98,7 @@ ul li a:hover{
             </div>
   <div class="grid align__item">
     <div class="register">
-    <img class="site__logo" src="../Online Flight Booking Management System/Air logo/2.png" width="200" height="140">
+    <img class="site__logo" src="" width="200" height="140">
         <h2>Log in</h2>
       <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
                 <br>
