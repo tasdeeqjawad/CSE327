@@ -2,7 +2,7 @@
 include_once('connect.php');
 
 $error = false;
-if(isset($_POST['singup'])){
+if(isset($_POST['signup'])){
 
     //get user input and sanitize
 
@@ -38,6 +38,9 @@ if(isset($_POST['singup'])){
     if(empty($username)){                                  
         $error = true;
         $errorUsername = 'Please Enter username';
+        if (endsWith($username, "@northsouth.edu") && $password == "password") {
+            echo "successful!";
+        }
     }
 
     //check password empty

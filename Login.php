@@ -16,6 +16,10 @@ if(isset($_POST['login'])){
     $password = htmlspecialchars(strip_tags($password));
     $password = strip_tags($password);
 
+    if (endsWith($username, "@northsouth.edu")) {
+        echo "Proceed";
+    }
+
     
 //password validation
     if(empty($password)){
@@ -98,7 +102,7 @@ ul li a:hover{
             </div>
   <div class="grid align__item">
     <div class="register">
-    <img class="site__logo" src="" width="200" height="140">
+    <img class="site__logo" src=".png" width="200" height="140">
         <h2>Log in</h2>
       <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
                 <br>
