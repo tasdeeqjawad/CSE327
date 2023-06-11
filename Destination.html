@@ -2,15 +2,89 @@
 <html>
 <head>
     <title>Carpooling Destinations</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("carpool-background.jpg");
+            background-size: cover;
+            background-position: fit;
+            background-repeat: no-repeat;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            transition: left 0.3s ease;
+        }
+        
+        .button:hover::before {
+            left: 0;
+        }
+        
+        .button::after {
+            content: "Select Destination";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .button:hover::after {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <h1>Carpooling Destinations</h1>
+    <h1><span style="font-style: italic;">Carpooling</span> Destinations</h1>
     <div class="container">
-        <a class="button" href="destination.php?destination=Uttara">Uttara &lt;--&gt; NSU</a>
-        <a class="button" href="destination.php?destination=Dhanmondi">Dhanmondi &lt;--&gt; NSU</a>
-        <a class="button" href="destination.php?destination=Gulshan">Gulshan &lt;--&gt; NSU</a>
-        <a class="button" href="destination.php?destination=Mirpur">Mirpur &lt;--&gt; NSU</a>
+        <a class="button" href="Rider.html?destination=Uttara">Uttara &lt;--&gt; NSU</a>
+        <a class="button" href="Rider.html?destination=Dhanmondi">Dhanmondi &lt;--&gt; NSU</a>
+        <a class="button" href="Rider.html?destination=Gulshan">Gulshan &lt;--&gt; NSU</a>
+        <a class="button" href="Rider.html?destination=Mirpur">Mirpur &lt;--&gt; NSU</a>
     </div>
 </body>
 </html>
